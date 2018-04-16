@@ -1,0 +1,42 @@
+{
+    "name": "FreeCodeCamp-with-Tool",
+    "version": "1.0.0",
+    "description": "",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.11.0",
+        "eslint-plugin-prettier": "^2.6.0",
+        "husky": "^0.14.3",
+        "jest": "^22.4.3",
+        "lint-staged": "^7.0.4",
+        "prettier": "1.12.0"
+    },
+    "dependencies": {
+        "npm": "^5.8.0"
+    },
+    "babel": {
+        "presets": [
+            "env"
+        ]
+    },
+    "scripts": {
+        "eslint": "eslint",
+        "prettier": "prettier",
+        "precommit": "lint-staged",
+        "test": "jest"
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier --write",
+            "eslint --fix",
+            "test",
+            "git add"
+        ]
+    }
+}
