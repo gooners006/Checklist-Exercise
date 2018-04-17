@@ -18,6 +18,8 @@
         "prettier": "1.12.0"
     },
     "dependencies": {
+        "express": "^4.16.3",
+        "express-generator": "^4.16.0",
         "npm": "^5.8.0"
     },
     "babel": {
@@ -29,13 +31,13 @@
         "eslint": "eslint",
         "prettier": "prettier",
         "precommit": "lint-staged",
-        "test": "jest"
+        "test": "jest",
+        "prepush": "yarn test"
     },
     "lint-staged": {
         "*.js": [
             "prettier --write",
             "eslint --fix",
-            "test",
             "git add"
         ]
     }
