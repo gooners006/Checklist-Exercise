@@ -31,8 +31,7 @@
         "eslint": "eslint",
         "prettier": "prettier",
         "precommit": "lint-staged",
-        "test": "jest",
-        "prepush": "yarn test"
+        "test": "jest"
     },
     "lint-staged": {
         "*.js": [
