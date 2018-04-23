@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Edit</th>
+        </tr>
+        {% for phone in data.rows %}
+        <tr>
+            <td>{{phone.id}}</td>
+            <td>{{phone.phonenames}}</td>
+            <td>{{phone.price}}</td>
+            <td>
+                <a href="/updatePhone/{{phone.id}}">Update</a> - <a onclick="return confirm('Are you sure?')" href="/deletePhone/{{phone.id}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button><a href="../addPhone">Add</a></button>
+</body>
+
+</html>
