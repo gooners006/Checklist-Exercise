@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-app.listen(process.evn.PORT || 3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log('running');
 });
 
